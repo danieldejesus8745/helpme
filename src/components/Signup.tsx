@@ -1,8 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import './styles/general.css';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/button';
-import MyButton from './customized-components/MyButton';
+import MyPrimarySubmitButton from './styling/MyPrimarySubmitButton';
 
 function Signup() {
   const [userData, setUserData] = useState<UserData>({
@@ -79,15 +78,7 @@ function Signup() {
           autoComplete="off"
         />
 
-        <MyButton />
-
-        {/* <Button variant='contained'>Hello World</Button> */}
-
-        {/* <input
-          type="submit"
-          value="Cadastrar"
-          className="btn"
-        /> */}
+        <MyPrimarySubmitButton value="Cadastrar" />
       </form>
       <p className="sub-form-p">Já tem conta? <Link to="/">Clique aqui</Link></p>
     </main>

@@ -1,5 +1,6 @@
 import './styles/general.css';
 import { Link } from 'react-router-dom';
+import MyPrimarySubmitButton from './styling/MyPrimarySubmitButton';
 
 function Login() {
   return (
@@ -8,7 +9,7 @@ function Login() {
       <form>
         <input type="email" placeholder="E-mail" required autoComplete="off" />
         <input type="password" placeholder="Senha" required autoComplete="off" />
-        <input type="submit" value="Cadastrar" className="btn" />
+        <MyPrimarySubmitButton value="Entrar"/>
       </form>
       <p className="sub-form-p">Ainda não tem conta? <Link to="/signup">Clique aqui</Link></p>
     </main>
