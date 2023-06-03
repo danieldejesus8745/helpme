@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import './styles/general.css';
+// import './styles/general.css';
 import { Link } from 'react-router-dom';
-import MyPrimarySubmitButton from './styling/MyPrimarySubmitButton';
+import MyPrimarySubmitButton from './styling/MyComponents/MyPrimarySubmitButton';
+import 
 
 function Signup() {
   const [userData, setUserData] = useState<UserData>({

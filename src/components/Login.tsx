@@ -1,6 +1,6 @@
-import './styles/general.css';
+// import './styles/general.css';
 import { Link } from 'react-router-dom';
-import MyPrimarySubmitButton from './styling/MyPrimarySubmitButton';
+import MyPrimarySubmitButton from './styling/MyComponents/MyPrimarySubmitButton';
 
 function Login() {
   return (
