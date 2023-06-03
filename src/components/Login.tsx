@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Login() {
   return (
     <div>
-      <main>Entrar
-        <h1>Cadastre-se</h1>
+      <main>
+        <h1>Entrar</h1>
         <form>
           <input type="email" placeholder="E-mail" required autoComplete="off" />
           <input type="password" placeholder="Senha" required autoComplete="off" />
