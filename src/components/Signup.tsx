@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import './styles/general.css';
 import { Link } from 'react-router-dom';
-import { SyntheticEvent } from 'react';
+import Button from '@mui/material/button';
+import MyButton from './customized-components/MyButton';
 
 function Signup() {
   const [userData, setUserData] = useState<UserData>({
@@ -41,52 +42,55 @@ function Signup() {
   }
 
   return (
-    <div>
-      <main>
-        <h1>Cadastre-se</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            onChange={
-              (e: ChangeEvent<HTMLInputElement>) => {
-                updateNameState(e?.target?.value)
-              }
+    <main>
+      <h1>Cadastre-se</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          onChange={
+            (e: ChangeEvent<HTMLInputElement>) => {
+              updateNameState(e?.target?.value)
             }
-            placeholder="Nome"
-            required
-            autoComplete="off"
-          />
-          <input
-            type="email"
-            onChange={
-              (e: ChangeEvent<HTMLInputElement>) => {
-                updateEmailState(e?.target?.value)
-              }
+          }
+          placeholder="Nome"
+          required
+          autoComplete="off"
+        />
+        <input
+          type="email"
+          onChange={
+            (e: ChangeEvent<HTMLInputElement>) => {
+              updateEmailState(e?.target?.value)
             }
-            placeholder="E-mail"
-            required
-            autoComplete="off"
-          />
-          <input
-            type="password"
-            onChange={
-              (e: ChangeEvent<HTMLInputElement>) => {
-                updatePasswordState(e?.target?.value)
-              }
+          }
+          placeholder="E-mail"
+          required
+          autoComplete="off"
+        />
+        <input
+          type="password"
+          onChange={
+            (e: ChangeEvent<HTMLInputElement>) => {
+              updatePasswordState(e?.target?.value)
             }
-            placeholder="Senha"
-            required
-            autoComplete="off"
-          />
-          <input
-            type="submit"
-            value="Cadastrar"
-            className="btn"
-          />
-        </form>
-        <p className="sub-form-p">Já tem conta? <Link to="/">Clique aqui</Link></p>
-      </main>
-    </div>
+          }
+          placeholder="Senha"
+          required
+          autoComplete="off"
+        />
+
+        <MyButton />
+
+        {/* <Button variant='contained'>Hello World</Button> */}
+
+        {/* <input
+          type="submit"
+          value="Cadastrar"
+          className="btn"
+        /> */}
+      </form>
+      <p className="sub-form-p">Já tem conta? <Link to="/">Clique aqui</Link></p>
+    </main>
   );
 }
 

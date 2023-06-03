@@ -4,14 +4,12 @@ import Signup from './components/Signup';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" Component={Login} />
-          <Route path="/signup" Component={Signup} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" Component={Login} />
+        <Route path="/signup" Component={Signup} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
