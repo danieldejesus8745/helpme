@@ -6,4 +6,3 @@ Online finance app
   - CSS
   - Javascript
   - ReactJs
-  - Material UI
